@@ -7,7 +7,7 @@ The goal is to compress the neural network using weights pruning and quantizatio
 Neural network architecture:</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/architecture.png" width="280">
 
-Test accuracy chart during training:</br>
+Test accuracy during training:</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/train_accuracy.png" width="700">
 
 ### 1. Full trainig.

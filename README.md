@@ -21,7 +21,7 @@ Once in a while remove weights lower than a threshold. In the meantime finetune 
 
 ### 3. Quantization and finetuning.
 
-Cluster remainig weights using k-means. Ater that finetune centroids of remaining quantized weights to recover accuracy. Each layer weights are quantized independently.</br>
+Quantization is done after pruning. Cluster remainig weights using k-means. Ater that finetune centroids of remaining quantized weights to recover accuracy. Each layer weights are quantized independently.</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/quantize.png" width="650">
 
 ### 4. Deployment.

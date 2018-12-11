@@ -28,10 +28,10 @@ Cluster remainig weights using k-means. Ater that finetune centroids of remainin
 
 Fully connected layers are done as sparse matmul operation. TensorFlow doesn't allow to do sparse convolutions. Convolution layers are explicitly transformed to sparse matrix operations with full control over valid weights. 
 
-Simple (input_depth=1, output_depth=1) convolution as matrix operation:</br>
+Simple (input_depth = 1, output_depth = 1) convolution as matrix operation:</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/sparse_conv1.png" width="500">
 
-Convolution as matrix operation:</br>
-<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/sparse_conv2.png" width="250">
+Convolution (input_depth > 1, output_depth > 1) as matrix operation:</br>
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/sparse_conv2.png" width="260">
 
 I do not make efficient use of quantization during deployment. It is possible to do it using TensorFlow operations, but it would be super slow, as for each output unit we need to create N_clusters sparse tensors from input data, reduce_sum in each tensor, multiply it by clusters and add tensor values resulting in output unit value. To do it efficiently, it requires to write kernel on GPU, which I intend to do in the future.

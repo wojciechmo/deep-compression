@@ -135,7 +135,7 @@ class LayerTrain(object):
 		print 'layer:', self.name
 		print '\tcentroids:', self.centroids
 		
-	def group_and_reduce_weights_gradient(self, grad):
+	def group_and_reduce_gradient(self, grad):
 		
 		grad_out = np.zeros(self.w.shape, dtype=np.float32)
 		

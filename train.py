@@ -108,7 +108,7 @@ if __name__ == "__main__":
 			grads_data = sess.run(grads, feed_dict={x_PH: batch_x, labels: batch_y})
 			feed_dict = {}
 			for L, grad, grad_data in zip(LAYERS, grads, grads_data):
-				grouped_grad_data = L.group_and_reduce_weights_gradient(grad_data)
+				grouped_grad_data = L.group_and_reduce_gradient(grad_data)
 				feed_dict[grad] = grouped_grad_data
 			
 			sess.run(train_step, feed_dict=feed_dict)

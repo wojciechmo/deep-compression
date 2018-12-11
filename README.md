@@ -5,9 +5,9 @@ TensorFlow implementation of paper: Song Han, Huizi Mao, William J. Dally. Deep 
 The goal is to compress the neural network using weights pruning and quantization with no loss of accuracy.
 
 Neural network architecture:</br>
-<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/architecture.png" width="300">
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/architecture.png" width="280">
 
-Training accuracy chart:</br>
+Test accuracy chart during training:</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/train_accuracy.png" width="700">
 
 ### 1. Full trainig.

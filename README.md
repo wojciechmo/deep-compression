@@ -28,7 +28,7 @@ Quantization is done after pruning. Cluster remainig weights using k-means. Ater
 
 Fully connected layers are done as sparse matmul operation. TensorFlow doesn't allow to do sparse convolutions. Convolution layers are explicitly transformed to sparse matrix operations with full control over valid weights. 
 
-Simple (input_depth=1, output_depth=1) convolution as matrix operation:</br>
+Simple (input_depth=1, output_depth=1) convolution as matrix operation (notice padding type and stride value):</br>
 <img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/sparse_conv1.png" width="500">
 
 Full (input_depth>1, output_depth>1) convolution as matrix operation:</br>

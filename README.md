@@ -5,10 +5,10 @@ TensorFlow implementation of paper: Song Han, Huizi Mao, William J. Dally. Deep 
 The goal is to compress the neural network using weights pruning and quantization with no loss of accuracy.
 
 Neural network architecture:</br>
-<p align="center"><img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/architecture.png" width="280"></p>
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/architecture.png" width="280">
 
 Test accuracy during training:</br>
-<p align="center"><img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/train_accuracy.png" width="700"></p>
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/train_accuracy.png" width="700">
 
 ### 1. Full trainig.
 
@@ -17,12 +17,12 @@ Train for number of iterations with gradient descent adjusting all the weights i
 ### 2. Pruning and finetuning.
 
 Once in a while remove weights lower than a threshold. In the meantime finetune remaining weights to recover accuracy.</br>
-<p align="center"><img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/prune.png" width="650"></p>
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/prune.png" width="650">
 
 ### 3. Quantization and finetuning.
 
 Quantization is done after pruning. Cluster remainig weights using k-means. Ater that finetune centroids of remaining quantized weights to recover accuracy. Each layer weights are quantized independently.</br>
-<p align="center"><img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/quantize.png" width="650"></p>
+<img src="https://github.com/WojciechMormul/deep-compression/blob/master/imgs/quantize.png" width="650">
 
 ### 4. Deployment.
 
